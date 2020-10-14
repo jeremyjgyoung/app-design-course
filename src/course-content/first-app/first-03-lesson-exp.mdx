@@ -1,0 +1,87 @@
+---
+title: Explanation 1.3 - Box Model
+topic: First App
+order: 206
+---
+
+import FlexAxes from "../components-for-content/FlexAxes.jsx";
+
+# Explanation of Activity Set Three
+
+This will explain the concepts from the last activity set.
+
+# The Text Component
+
+The text in your app should all be wrapped in a Text component.
+
+```jsx
+<View>
+    Incorrect way to show text.
+</View>
+
+<View>
+    <Text>Correct way to show text.</Text>
+</View>
+```
+
+The text style prop includes the text's color, fontSize, fontStyle, and fontWeight.
+
+```jsx
+// Example Text
+<Text style={styles.appTitle}>App Title</Text>
+
+// Example StyleSheet
+let styles = StyleSheet.create({
+    appTitle: {
+        color: "#00ff00",
+        fontSize: 18,
+        fontStyle: "italic",
+        fontWeight: "400",
+    },
+});
+```
+
+# More Flexbox
+
+## The Two Axes
+
+There are two axes: the main axis and the cross axis.
+
+If the flex direction is in the row orientation, then the main axis runs from left to right and the cross axis runs from top to bottom.
+If the flex direction is in the column orientation, then the main axis runs from top to bottom and the cross axis runs from left to right.
+
+## justifyContent and alignItems
+
+The children of the main container can be at the start (flex-start), end (flex-end), or center.
+On the main axis justifyContent is the property to use and on the cross axis alignItems is the property to use.
+
+Change the axis, justifyContent, and alignItems, respectively, with the dropdowns below.
+
+<FlexAxes />
+
+## Flexbox Example
+
+<p>
+You can try out your knowledge of flexbox axes by change the flexDirection, justifyContent, and alignItems with <a href="https://snack.expo.io/@jeremyjgyoung/flexbox-example-two" target="_blank">this second example</a>.
+</p>
+
+# The Box Model
+
+A good way to view of an app design is to think of
+any element on the screen as a box from text to buttons.
+Your job as a designer is to place, style, and size these boxes.
+
+A box has four elements that take up space: the content, padding, border, and margin from inside out.
+
+An example of content is text with a certain width and height. Padding is the space between the content and the border.
+Often there is not a visual border for a box. When there is a border it is between the padding and margin.
+Finally, the margin is the space between the box and other elements.
+
+![Box Model Diagram](./box-model-diagram.png)
+
+<p>You can try changing the features relevant to the box model here: <a href='https://snack.expo.io/@jeremyjgyoung/box-model-example' target='_blank'>Box Model Example</a>.</p>
+
+# Onward!
+
+Feel free to go to the home screen to check out more references or navigate back to the code to explore more.
+Move onto the next activity set when you feel ready.

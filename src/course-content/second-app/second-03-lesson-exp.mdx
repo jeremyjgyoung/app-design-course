@@ -1,0 +1,55 @@
+---
+title: Explanation 2.3 - Debug
+topic: Second App
+order: 306
+---
+
+# Explanation of Activity Set 2.3
+
+This will explain the concepts from the last activity set.
+
+# Imports
+
+When you are using other peoples' code, you must import it at the top. 
+Often other peoples code will start with capital letters.
+
+```jsx
+import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+```
+
+# The Right Components
+
+All of the code in the return statement should be wrapped in a single View component.
+
+```jsx
+return (
+  <View style={styles.container}>
+    <Text style={styles.titleText}>FOREST APP</ Text>
+    <Image
+      style={styles.image}
+      source={require('./forest-image.jpg')}
+    />
+    <TouchableOpacity
+      style={styles.button}
+      onPress={onPressFunction}
+    >
+      <Text>Press Me</Text>
+    </TouchableOpacity>
+  </View>
+);
+```
+
+All of your text should be wrapped in a Text component.
+
+# Spelling & Symbols
+
+Spelling is one of the biggest reasons for code not working. 
+Make sure you are spelling words correctly and consistently.
+
+Whitespace typically does not affect code, but other symbols do. Make sure you have the correct symbols.
+
+# Onward!
+
+Feel free to go to the home screen to check out more references or navigate back to the code to explore more.
+Move onto the next activity set when you feel ready.

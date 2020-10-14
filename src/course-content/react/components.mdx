@@ -1,0 +1,144 @@
+---
+title: Components
+topic: React
+order: 701
+---
+
+# Components
+
+## Components' Syntax & Concepts
+
+Components are written with the component name surrounded by "<" and ">".
+
+```jsx
+// This is a Text component
+<Text>My text component</Text>
+```
+
+Inside the component you will often have more information like text or another component.
+
+```jsx
+// Text inside of the two tags
+<Text>Here is text.</Text>
+
+// Other components
+<View>
+    <View></View>
+    <View></View>
+</View>
+```
+
+Some components like the Image component don't need anything inside of it so it does not have a closing tag.
+
+```jsx
+// Self-Closing Tag
+<Image />
+
+// More information
+<Text>Here is text.</Text>
+```
+
+Within the first tag there will often be something to tell the component more information.
+For instance, where the image is located or how to style the component.
+These are called props or attributes.
+
+```jsx
+// The Text component with a style prop
+<Text style={styles.title}>Press Me</Text>
+
+// The Image component with a style prop and a source prop
+<Image
+    style={styles.image}
+    source={require("./forest-image.jpg")} 
+/>
+// Note that the white space makes it easier to read but has the same function
+```
+
+## The View Component
+
+Components are visual pieces of our app.
+So far we have encountered the View component which you can think of as a rectangular box.
+
+```jsx
+// The View component
+<View></View>
+```
+
+Props (or attributes) provide more information to the component. 
+The **style** prop connects the component to the styles in the StyleSheet.
+
+```jsx
+// The View component with a style prop
+<View style={styles.container}></View>
+```
+
+## The Text Component
+
+The text in your app should all be wrapped in a Text component.
+
+```jsx
+<View>
+    Incorrect way to show text.
+</View>
+
+<View>
+    <Text>Correct way to show text.</Text>
+</View>
+```
+
+The text style prop includes the text's color, fontSize, fontStyle, and fontWeight.
+
+```jsx
+// Example Text
+<Text style={styles.appTitle}>App Title</Text>
+
+// Example StyleSheet
+let styles = StyleSheet.create({
+    appTitle: {
+        color: "#00ff00",
+        fontSize: 18,
+        fontStyle: "italic",
+        fontWeight: "400",
+    },
+});
+```
+
+## The Image Component
+
+The Image component tells the computer which file to load, in addition
+to the width and height of the image.
+
+```jsx
+<Image 
+    style={styles.dogImage}
+    source={require('./fluffy-dog.jpg')} 
+/>
+```
+
+The Image tag does not have a closing tag because we don't put things inside of an Image tag. 
+Note when you have multiple props for a component you will often put it on different lines to make the component more readable.
+
+## The TouchableOpacity Component
+
+TouchableOpacity is used as a button.
+It has a special attribute called onPress which runs code when the button is pressed.
+
+```jsx
+<TouchableOpacity
+    style={styles.pressMeButton}
+    onPress={functionActivatedWhenPressed}
+>
+</TouchableOpacity>
+```
+Refer to the box model when adding styles to TouchableOpacity.
+
+If you text in your button you'll need to embed a Text component within the TouchableOpacity component.
+
+```jsx
+<TouchableOpacity
+    style={styles.pressMeButton}
+    onPress={functionActivatedWhenPressed}
+>
+    <Text>Press Me</Text>
+</TouchableOpacity>
+```

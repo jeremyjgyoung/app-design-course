@@ -1,0 +1,155 @@
+---
+title: Activity 2.1 - Components
+topic: Second App
+order: 301
+---
+
+# Activity Set 2.1
+
+This activity set will introduce you to the Image and TouchableOpacity components.
+
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-2.1" target="_blank"  class="mdxLink">Activity Set 2.1 Code</a>
+
+## Activity I: Change the alert Text
+
+What do you think will happen when you press the Press Me button?
+
+Look at the code and then press the button.
+
+Click on "No errors" on the bottom left of the IDE.
+Then click on "LOGS" to see the result of console.log.
+
+Then change the text in the alert. Make sure you keep the quotes the same.
+
+```jsx
+// Before
+let functionActivatedWhenPressed = () => {
+    alert("Pressed!");
+    console.log("Yeah, definitely pressed the button");
+  };
+```
+
+```jsx
+// After
+let functionActivatedWhenPressed = () => {
+    alert("This is something else now!");
+    console.log("Yeah, definitely pressed the button");
+  };
+```
+
+Press the button again to see the what has changed.
+
+When the button is pressed it uses the code in functionActivatedWhenPressed is used.
+TouchableOpacity is a component that we will use as a button.
+
+Take a moment to trace the code relevant to the button press.
+
+## Activity II: Change the Name of the Function
+
+Above the TouchableOpacity component add an Image component.
+
+```jsx
+// Before
+let functionActivatedWhenPressed = () => {
+    alert("This is something else now!");
+    console.log("Yeah, definitely pressed the button");
+  };
+```
+
+```jsx
+// After
+let pressAlert = () => {
+    alert("This is something else now!");
+    console.log("Yeah, definitely pressed the button");
+  };
+```
+
+There is an error because the program is still looking for a function named functionActivatedWhenPressed.
+We need to change the name of the function referenced after onPress.
+
+```jsx
+// Before
+return (
+    <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.pressMeButton}
+        onPress={functionActivatedWhenPressed}
+      >
+        <Text>Press Me</Text>
+      </TouchableOpacity>
+    </View>
+);
+```
+
+```jsx
+// After
+return (
+    <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.pressMeButton}
+        onPress={pressAlert}
+      >
+        <Text>Press Me</Text>
+      </TouchableOpacity>
+    </View>
+);
+```
+
+Now we have a function name that is shorter yet descriptive.
+
+Note that the words after the **let** keyword are variables.
+Variables can be named many things as long as you are consistent with the name where you reference the variable.
+
+## Activity III: Add an Image
+
+Above the TouchableOpacity component add an Image component.
+The Image component uses a source attribute to find the relevant file.
+
+Imagine how this will change the look of this app.
+
+```jsx
+// Before
+return (
+    <View style={styles.container}>
+        <TouchableOpacity
+            style={styles.pressMeButton}
+            onPress={functionActivatedWhenPressed}
+        >
+            <Text>Press Me</Text>
+        </TouchableOpacity>
+    </View>
+);
+```
+
+```jsx
+// After
+return (
+    <View style={styles.container}>
+        <Image style={styles.dogImage} source={require('./fluffy-dog.jpg')} />
+        <TouchableOpacity
+            style={styles.pressMeButton}
+            onPress={functionActivatedWhenPressed}
+        >
+            <Text>Press Me</Text>
+        </TouchableOpacity>
+    </View>
+);
+```
+
+Surprisingly, at this point we still don't see a picture render to the screen. 
+Images require a height and width.
+
+Add a dogImage property to the StyleSheet below the pressMeButton property.
+Make sure to include the correct punctuation.
+
+```jsx
+// Add width and height to the StyleSheet with the property of dogImage
+dogImage: {
+    width: '64px',
+    height: '96px',
+}
+```
+
+Feel free to try different widths and heights for the image.
+
+Let's move onto to the explanation of this activity set.

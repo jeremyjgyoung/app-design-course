@@ -1,0 +1,176 @@
+---
+title: Explanation 1.1 - Intro
+topic: First App
+order: 202
+---
+
+import ColorBox from "../components-for-content/ColorBox.jsx";
+import ColorfulHexBox from "../components-for-content/ColorfulHexBox.jsx";
+
+# Explanation of Activity Set One
+
+This will explain the concepts from the last activity set.
+
+# Keywords, Variables, and Properties
+
+In any language there is a group of keywords.
+In our first activity set the JavaScript keywords include import, let, return, and export. 
+These are words that have a special meaning.
+For instance, **import** is a way of bringing code from libraries or other files to the current file.
+
+A variable name is a way a way of being able to name a value and be able to reference it elsewhere in your code.
+
+```js
+// Here is a JavaScript variable
+let aVariableName = "Short yet descriptive";
+```
+
+An object holds pairs of related data.
+The object itself has a variable name.
+Within in the object there are key-value pairs called a property - 
+where the property name (key) is before the semicolon and the property value (value) is after the semicolon.
+
+```js
+// anExampleObject is the variable name for the object
+// firstName, lastName, and age are property names
+let anExampleObject = {
+  firstName: "Mary",
+  lastName: "Yu",
+  age: 52,
+};
+```
+The convention for naming a variable or property in JavaScript is to use lowerCamelCase that is short yet descriptive.
+
+# Import
+
+At the top of the App.js file there are two import statements. 
+The import statements allow us to use code from other people.
+
+In the first code set we imported **React** from the react library and **StyleSheet** and **View** from the react native library.
+
+```jsx
+import React from "react";
+import { StyleSheet, View } from "react-native";
+```
+
+The curly braces in the second import is used to import specific parts of react native library.
+
+# Our App Component
+
+On line 4 to 9 we define our App component.
+
+```jsx
+// Our App component
+let App = () => {
+  return (
+    <View style={styles.thisCouldBeAnyName}>
+    </View>
+  );
+};
+```
+We create what the app will look like within the return statement of the App component.
+
+We export our App on line 18 to make it available outside of this file.
+
+```jsx
+export default App;
+```
+
+# The View Component
+
+Components are visual pieces of our app.
+So far we have encountered the View component which you can think of as a rectangular box.
+
+```jsx
+// The View component
+<View></View>
+```
+
+Props (or attributes) provide more information to the component. 
+The **style** prop connects the component to the styles in the StyleSheet.
+
+```jsx
+// The View component with a style prop
+<View style={styles.container}></View>
+```
+
+Whitespace only has an effect on the result of our code in certain places - like displayed text.
+We can use whitespace to make our code more clear.
+
+```jsx
+// Limited whitespace
+<View style={styles.thisCouldBeAnyName}></View>
+
+// Same result as the View component above
+<View 
+  style={styles.thisCouldBeAnyName}
+>
+</View>
+```
+
+# The StyleSheet
+
+The StyleSheet is an object where you define the style for your app.
+This includes colors, sizes, and position of elements within your app.
+
+```jsx
+let styles = StyleSheet.create({
+  thisCouldBeAnyName: {
+    backgroundColor: "#00ffff",
+    height: "100%",
+  },
+});
+```
+
+To use a StyleSheet you need to import the StyleSheet, create the StyleSheet, and use the style.
+
+At the top of the file we imported the StyleSheet from the react-native library.
+
+```jsx
+import { StyleSheet} from "react-native";
+```
+
+Then we make a StyleSheet that defines styles of the app.
+We can name the StyleSheet anything, but **styles** is a good default.
+
+```jsx
+let styles = StyleSheet.create({
+  thisCouldBeAnyName: {
+    backgroundColor: "#00ffff",
+    height: "100%",
+  },
+});
+```
+
+The name before the colon like **thisCouldBeAnyName** is a property.
+To use the style we need to reference the property by using the name of the StyleSheet (ie. **styles**) and the name of the property (ie. **thisCouldBeAnyName**). 
+
+```jsx
+<View style={styles.thisCouldBeAnyName}></View>
+```
+
+The curly braces around **{styles.thisCouldBeAnyName}** is to tell the computer to use JavaScript to reference the style property.
+
+# Colors
+
+There is a hexadecimal system for colors that uses the numbers 0-9 and letters a-f.
+
+The hex code for colors uses six hexadecimal values.
+Two values for red, green, and blue in that order.
+The value 00 would be completely off for the pixel while ff would be completely on.
+
+Scroll over the color buttons to see the hex code for each color:
+
+<ColorBox />
+
+The # sign is a common way to say we are using hexadecimal values. 
+When each of the red, green, and blue values are the same, the result is a grey color.
+
+Move the sliders to make the box change colors:
+
+<ColorfulHexBox />
+
+# Onward!
+
+Feel free to go to the home screen to check out more references or navigate back to the code to explore more.
+Move onto the next activity set when you feel ready.

@@ -1,0 +1,72 @@
+---
+title: useState
+topic: React
+order: 702
+---
+
+# useState
+
+## Data
+
+Data is important in an app.
+Often data will change based on the user.
+In our examples, data has includes emojis and to dos.
+Our data has been held as data types of strings and the data structure of an array.
+State is data contained in our app.
+
+## useState
+
+In the useState hook we define the name of our state, what we use to change the state, and the initial state.
+
+```jsx
+const [count, setCount] = useState(0);
+```
+
+In the example above, count is the name of the current state, setCount is the name of the function we call to change state, and 0 is the initial state.
+
+## Using State
+
+In order to use the state, we can treat state like any other variable.
+
+```jsx
+<Text>{count}</Text>
+```
+
+The curly braces allow us to use JavaScript in our JSX.
+Numbers and text we show in a Text component.
+
+Since useState is a special word that uses code from the React library.
+We need to import useState from React.
+
+```jsx
+import React, { useState } from "react";
+```
+
+## Changing State
+
+Often you want to change the state when something happens, for instance a button is pressed.
+
+In the first activity set we had a button that uses the updateEmoji function when pressed.
+Then in the function we use setEmojiData() to change the state to a pizza emoji.
+
+```jsx
+let App = () => {
+    let [emojiData, setEmojiData] = useState("");
+
+    let updateEmoji = () => {
+        setEmojiData("🍕");
+    };
+
+    return (
+        <View style={styles.container}>
+        <TouchableOpacity 
+            onPress={updateEmoji}
+            style={styles.button}
+        >
+            <Text style={styles.buttonText}>Press This</Text>
+        </TouchableOpacity>
+        <Text style={styles.emoji}>{emojiData}</Text>
+        </View>
+    );
+    };
+```

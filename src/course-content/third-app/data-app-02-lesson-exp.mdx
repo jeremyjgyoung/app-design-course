@@ -1,0 +1,91 @@
+---
+title: Explanation 3.2 - Arrays
+topic: Third App
+order: 405
+---
+
+# Explanation of Activity Set 3.2
+
+This will explain the concepts from the last activity set.
+
+Arrays are a way of storing a list of values.
+
+## Array Syntax
+
+In JavaScript, arrays are declared and initialized just like any other variable with the **let** keyword, a variable name, an equals sign, the value (of an array), and a semicolon.
+
+```js
+// Here is an empty array declared and initialized
+let emptyArr = [];
+```
+
+The array is a comma separated list of values.
+The values can include a strings, numbers, booleans, objects, or arrays.
+
+```js
+// Example array you might have in a to do list app
+let toDoArray = ["take out garbage", "email Susan", "sweep floors"];
+```
+
+## Accessing Array
+
+Arrays organize values. 
+To access these values types the name of the array and relevant position in the array in square brackets.
+
+```js
+// Object
+let mixArr = ["Orange", 29, true, "blue"];
+
+// Accessing object's values
+console.log(mixArr[0]); // prints "Orange" - note the first array element has an index of 0
+console.log(mixArr[2]); // prints true
+```
+
+## Array Methods
+
+Arrays have methods help us use arrays.
+
+The map() method takes each item of an array and allows you to transform it.
+
+```js
+const exampleArray = [2, 5, 1, 9];
+
+// arrItem represents each item of the array - you could replace arrItem with any valid variable name
+const exArrTimesThree = exampleArray.map(arrItem => arrItem * 3);
+
+console.log(exArrTimesThree); // prints [6, 15, 3, 27]
+```
+
+The map() method can be useful if we want to display each item of the array in a particular way.
+
+```js
+// this code displays each item of the toDoList array
+toDoList.map(toDoItem => 
+    <View>
+        <Text>{toDoItem}</Text>
+    </View>
+)
+```
+
+The spread operator (...) copies all of the items in an array.
+
+```js
+let warmColors = ["red", "orange"];
+
+let colorsArray = ["blue", "green", ...warmColors, "yellow"];
+
+console.log(colorsArray); // prints ["blue", "green", "red", "orange", "yellow"]
+```
+
+The spread operator is useful when adding an item to an array.
+
+```js
+let updateToDoList = () => {
+    setToDoList(toDoList => [...toDoList, toDo]); // adds toDo
+};
+```
+
+# Onward!
+
+Feel free to go to the home screen to check out more references or navigate back to the code to explore more.
+Move onto the next activity set when you feel ready.

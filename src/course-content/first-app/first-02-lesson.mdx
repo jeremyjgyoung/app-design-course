@@ -1,0 +1,202 @@
+---
+title: Activity Set 1.2 - Flexbox
+topic: First App
+order: 203
+---
+
+# Activity Set 1.2
+
+This activity set will introduce you to flexbox.
+
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-1.2" target="_blank" class="mdxLink">Activity Set 1.2 Code</a>
+
+## Activity I: Change the Flex
+
+Change the **flex** number for containerB in the StyleSheet.
+
+How do you think this will affect the size of containerB?
+
+```jsx
+// Before
+containerB: {
+  flex: 1,
+  flexDirection: "column",
+  borderColor: "#000000",
+  borderWidth: "10px",
+},
+```
+
+```jsx
+// After
+containerB: {
+  flex: 5,
+  flexDirection: "column",
+  borderColor: "#000000",
+  borderWidth: "10px",
+},
+```
+
+Continue changing the flex number until you have developed a sense of what it does.
+
+## Activity II: Change the Flex Direction
+
+Change **flexDirection** for containerB in the StyleSheet from column to **row**.
+
+What will the boxes look like after you change this property?
+
+```jsx
+// Before
+containerB: {
+  flex: 5,
+  flexDirection: "column",
+  borderColor: "#000000",
+  borderWidth: "10px",
+},
+```
+
+```jsx
+// After
+containerB: {
+  flex: 5,
+  flexDirection: "row",
+  borderColor: "#000000",
+  borderWidth: "10px",
+},
+```
+
+## Activity III: Add a View
+
+Next we will add a new View component with some styles.
+
+**Add** a **View** component below sectionA2 called **newSection**.
+
+```jsx
+// Before
+let App = () => {
+  return (
+    <View style={styles.main}>
+      <View style={styles.containerA}>
+        <View style={styles.sectionA1}>
+        </View>
+        <View style={styles.sectionA2}>
+        </View>
+      </View>
+      <View style={styles.containerB}>
+        <View style={styles.sectionB1}>
+        </View>
+        <View style={styles.sectionB2}>
+        </View>
+      </View>
+    </View>
+  );
+};
+```
+
+```jsx
+// After
+let App = () => {
+  return (
+    <View style={styles.main}>
+      <View style={styles.containerA}>
+        <View style={styles.sectionA1}>
+        </View>
+        <View style={styles.sectionA2}>
+        </View>
+        <View style={styles.newSection}>
+        </View>
+      </View>
+      <View style={styles.containerB}>
+        <View style={styles.sectionB1}>
+        </View>
+        <View style={styles.sectionB2}>
+        </View>
+      </View>
+    </View>
+  );
+};
+```
+Then add a property to the StyleSheet that matches with the style attribute in the View component.
+
+The **newSection** should have a **flex** of **1** and a **backgroundColor** of **#ff0000**.
+
+Look at the pattern of the other StyleSheet properties to make sure you have all of the commas, curly braces, and colons in the right spot.
+
+```jsx
+// Before
+let styles = StyleSheet.create({
+  main: {
+    flexDirection: "row",
+    flex: 1,
+  },
+  containerA: {
+    flex: 1,
+    flexDirection: "column",
+  },
+  containerB: {
+    flex: 1,
+    flexDirection: "column",
+    borderColor: "#000000",
+    borderWidth: "10px",
+  },
+  sectionA1: {
+    flex: 1,
+    backgroundColor: "#ffffff",
+  },
+  sectionA2: {
+    flex: 3,
+    backgroundColor: "#00ffff",
+  },
+  sectionB1: {
+    flex: 3,
+    backgroundColor: "#ff0000",
+  },
+  sectionB2: {
+    flex: 1,
+    backgroundColor: "#0000ff",
+  },
+});
+```
+
+```jsx
+// After
+let styles = StyleSheet.create({
+  main: {
+    flexDirection: "row",
+    flex: 1,
+  },
+  containerA: {
+    flex: 1,
+    flexDirection: "column",
+  },
+  containerB: {
+    flex: 1,
+    flexDirection: "column",
+    borderColor: "#000000",
+    borderWidth: "10px",
+  },
+  sectionA1: {
+    flex: 1,
+    backgroundColor: "#ffffff",
+  },
+  sectionA2: {
+    flex: 3,
+    backgroundColor: "#00ffff",
+  },
+  sectionB1: {
+    flex: 3,
+    backgroundColor: "#ff0000",
+  },
+  sectionB2: {
+    flex: 1,
+    backgroundColor: "#0000ff",
+  },
+  newSection: {
+      flex: 1,
+      backgroundColor: "#ff0000",
+  },
+});
+```
+
+Feel free to continue making changes in your code to understand more.
+
+Let's move onto to the explanation of this activity set.

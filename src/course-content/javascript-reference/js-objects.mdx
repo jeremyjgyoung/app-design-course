@@ -1,0 +1,111 @@
+---
+title: JavaScript Objects
+topic: JavaScript Reference
+order: 603
+---
+
+# JavaScript Objects
+
+Objects are a way of storing a set of related values in pairs.
+
+## Object Syntax
+
+In JavaScript, objects are declared and initialized just like any other variable with the **let** keyword, a variable name, an equals sign, the value (of an object), and a semicolon.
+
+```js
+// Here is an empty object declared and initialized
+let emptyObj = {};
+```
+
+The object itself consists of key-value pairs that use a colon to separate the key from the value and a comma to separate between other key-value pairs. 
+The value can be a string, number, boolean, another object, or function.
+
+```js
+// Example object that you may use for a pedometer app
+let userObject = {
+    firstName: "Henry",
+    favoriteColor: "teal",
+    pedometerCount: 0,
+    loggedIn: true,
+};
+
+// Similar object with an object as a value
+let userTwo = {
+    firstName: "Henry",
+    favoriteColor: "teal",
+    healthStats: {
+        heartRateBPM: 80,
+        activeMinutes: 20,
+        pedometerCount: 0,
+    },
+    loggedIn: true,
+};
+```
+
+We have used an object with the StyleSheet object.
+
+```js
+let styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#333333",
+        alignItems: "center",
+        justifyContent: "flex-start",
+    },
+    pressMeButton: {
+        marginTop: "10px",
+        padding: "5px",
+        backgroundColor: "#ffffff",
+    },
+});
+```
+
+The StyleSheet.create() is using code from React Native.
+
+## Accessing Objects
+
+Objects organize values. 
+To access these values types the name of the object and relevant key separated by a period.
+
+```js
+// Object
+let userObject = {
+    firstName: "Henry",
+    favoriteColor: "teal",
+    pedometerCount: 0,
+    loggedIn: true,
+};
+
+// Accessing object's values
+console.log(userObject.pedometerCount); // prints 0
+console.log(userObject.firstName); // prints "Henry"
+```
+
+The style attribute in components take an object that references
+
+```jsx
+// VERSION ONE
+// Having a style object inline with a View component
+<View style={{
+    flex: 1,
+    backgroundColor: "#333333",
+    alignItems: "center",
+    justifyContent: "flex-start",
+}}>
+</View>
+
+// VERSION TWO
+// Using the StyleSheet references to a style object
+<View style={styles.container}>
+</View>
+
+// The StyleSheet
+let styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#333333",
+        alignItems: "center",
+        justifyContent: "flex-start",
+    },
+});
+```

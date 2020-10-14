@@ -1,0 +1,122 @@
+---
+title: Activity 2.3 - Debug
+topic: Second App
+order: 305
+---
+
+# Activity Set 2.3
+
+This activity set will introduce you to how to debug your app.
+
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-2.3" target="_blank"  class="mdxLink">Activity Set 2.3 Code</a>
+
+Before going through the activities, identify as many errors as you can.
+
+## Activity I: Add Text Component
+
+Wrap the text at the top in a Text component and add a reference to the styles.
+
+```jsx
+// Before
+FOREST APP
+```
+
+```jsx
+// After
+<Text style={styles.titleText}>FOREST APP</ Text>
+```
+
+Text should be wrapped in a Text component.
+
+## Activity II: Wrap Everything in a View Component
+
+Note the error at the top. Wrap the your code in a View component.
+
+```jsx
+// Before
+return (
+    <Text style={styles.titleText}>FOREST APP</ Text>
+    <Image
+      style={styles.image}
+      source={require('./forest-image.jpg')}
+    />
+    <TouchableOpacity
+      style={styles.button}
+      onPress={onPressFunction}
+    >
+      <Text>Press Me</Text>
+    </TouchableOpacity>
+);
+```
+
+```jsx
+// After
+return (
+  <View style={styles.container}>
+    <Text style={styles.titleText}>FOREST APP</ Text>
+    <Image
+      style={styles.image}
+      source={require('./forest-image.jpg')}
+    />
+    <TouchableOpacity
+      style={styles.button}
+      onPress={onPressFunction}
+    >
+      <Text>Press Me</Text>
+    </TouchableOpacity>
+  </View>
+);
+```
+
+In Expo/React apps, you need a single component that wraps everything in the return area.
+
+## Activity III: Import the Image Component
+
+Components such as Text, View, and TouchableOpacity have been imported from React Native.
+Add the Image component to the import statement.
+
+```jsx
+// Before Top Section
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+```
+
+```jsx
+// After Top Section
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+
+// Add this property to the StyleSheet section
+subSectionThree: {
+    flex: 1,
+    backgroundColor: '#ff0000',
+}
+```
+
+The import statements allow us to use other peoples' code.
+
+Now we can finally see the app!
+
+## Activity IV: Match the Correct Property Name
+
+Notice the error with forestImage in the StyleSheet. Match the property name in the style attribute.
+
+```jsx
+// Before
+<Image
+  style={styles.image}
+  source={require('./forest-image.jpg')}
+/>
+```
+
+```jsx
+// After
+<Image
+  style={styles.forestImage}
+  source={require('./forest-image.jpg')}
+/>
+```
+
+Not matching names exactly can lead to errors.
+
+Great! Be sure to revisit these concepts to troubleshoot your app.
+
+Let's move onto to the explanation of this activity set.

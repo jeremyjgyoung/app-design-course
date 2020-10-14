@@ -1,0 +1,95 @@
+.lessonSection {
+    padding: 25px;
+    @media (min-width: 1000px) {
+        margin-left: 280px;
+        max-width: 800px;
+        min-width: 20%;
+    }
+    h1, h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 30px;
+    }
+    h4 {
+        color: white;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 10px;
+        font-size: 18px;
+    }
+    .pnTitle {
+        font-weight: normal;
+    }
+    p, #text {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        text-rendering: optimizeLegibility;
+        margin: 20px 0;
+    }
+    em {
+        font-family: 'VT323', monospace;
+        font-style: normal;
+        font-size: 24px;
+        color: #882828;
+    }
+    a .lessonA {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        text-rendering: optimizeLegibility;
+        margin: 20px 0;
+        text-decoration: none;
+        :hover {
+            background: #2C5967;
+            color: white;
+        }
+    }
+    ul, ol {
+        margin-left: 30px;
+        margin-bottom: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    
+}
+
+.codeLink {
+    font-size: 50px;
+}
+
+.pnLessonNav {
+    display: flex;
+    margin-right: 25px;
+    justify-content: space-between;
+    @media (min-width: 1000px) {
+        margin-right: 160px;
+    }
+    a {
+        width: 140px;
+        text-decoration: none;
+        color: #312D2A;
+        :hover {
+            background-color: #E5B88E;
+            box-shadow: none;
+        }
+    }
+}
+
+.cardContainer {
+    width: 200px;
+    height: 80px;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #2C5967;
+    border: 2px black;
+    border-radius: 8px;
+    box-shadow: 5px 5px black;
+    @media (max-width: 1000px) {
+        width: 150px;
+        padding: 20px 10px;
+    }
+}
+
+img {
+    width: 100%;
+}

@@ -1,10 +1,48 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `course-content`,
+        path: `${__dirname}/src/course-content/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          }, 
+          {
+            resolve: `gatsby-remark-embedder`,
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+          },
+          {
+            family: `VT323`,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`
+  ],
 }

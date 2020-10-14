@@ -1,0 +1,118 @@
+---
+title: JavaScript Functions
+topic: JavaScript Reference
+order: 604
+---
+
+# JavaScript Functions
+
+Functions perform a specific task.
+
+Functions help organize our code and make code reusable.
+
+## Function Syntax
+
+There are several types of ways to write a function.
+
+Functions have certain elements including a name, parameters, a block of code, and keywords.
+
+Here is a function that adds two numbers.
+
+```js
+let addFunc = (a, b) => {
+    return a + b;
+};
+
+alert(addFunc(3, 2)); // alerts 5
+alert(addFunc(5, 6)); // alerts 11
+```
+
+Below is same function written in four different ways. Each of the functions is used and alerted.
+
+```js
+// 1. Arrow Function
+let accArrow = (force, mass) => {
+    return force / mass;
+}
+
+alert(accArrow(20, 5));
+
+// 2. Function Expression
+let accExpression = function(force, mass) {
+    return force / mass;
+};
+
+alert(accExpression(20, 5));
+
+// 3. Function Declaration
+function accDeclaration(force, mass) {
+    return force / mass;
+}
+
+alert(accDeclaration(20, 5));
+
+// 4. Function in an Object (Also Called a Method)
+let physicsObject = {
+    accMethod(force, mass) {
+        return force / mass;
+    },
+};
+
+alert(physicsObject.accMethod(20, 5));
+```
+We have been using arrow functions. 
+With this guide you should recognize other styles of writing a function.
+
+In the activities you may have noticed functions used when something is clicked.
+
+```jsx
+let App = () => {
+    let functionActivatedWhenPressed = () => {
+        alert("Pressed!");
+        console.log("Yeah, definitely pressed the button");
+    };
+
+    return (
+        <View style={styles.container}>
+        <TouchableOpacity
+            style={styles.pressMeButton}
+            onPress={functionActivatedWhenPressed}
+        >
+            <Text>Press Me</Text>
+        </TouchableOpacity>
+        </View>
+    );
+};
+```
+
+The function, functionActivatedWhenPressed, is activated when a user presses the TouchableOpacity button.
+
+## Using Functions & Parameters (or Arguments)
+
+Parameters are pieces of data you provide to be used by a function. Parameters are written after in parentheses separated by commas. 
+There can be zero, one, or multiple parameters used by a function.
+
+To use a function you type the name of the function followed by parentheses with any relevant parameters in the parentheses.
+
+```js
+// Function with no parameters
+let sayHello = () => {
+    return "Hello!";
+}
+
+// Function with one parameter
+let sayHelloToPerson = (personsName) => {
+    return "Hello " + personsName + "!";
+}
+
+// Function with three parameters
+let greetPerson = (personOne, personTwo, day) => {
+    return "Hello " + personOne + "! " + "I am " + personTwo + ". How is your " + day + " going?";
+}
+
+
+// Using 0, 1, and 3 parameters for the functions above
+console.log(sayHello()); // prints "Hello"
+console.log(sayHelloToPerson("Fiona")); // prints "Hello Fiona!"
+console.log(greetPerson("Fiona", "Tyler", "Saturday")); // prints "Hello Fiona! I am Tyler. How is your Saturday going?"
+```

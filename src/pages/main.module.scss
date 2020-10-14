@@ -1,0 +1,56 @@
+.main {
+  background: #312d2a;
+  font-family: Georgia, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 80px;
+  .title {
+    color: #fcfbfa;
+    margin-top: 40px;
+  }
+  .subTitle {
+    color: #fcfbfa;
+    margin-top: 32px;
+    margin-bottom: 20px;
+    font-size: 28px;;
+    font-weight: normal;
+    font-style: normal;
+  }
+  h3 {
+    margin-top: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+  }
+}
+
+.container {
+  width: 350px;
+  padding: 20px;
+  a {
+    text-decoration: none;
+    color: #312d2a;
+    :hover {
+      background-color: #facd62;
+      box-shadow: none;
+    }
+  }
+}
+
+.cardContainer {
+  max-width: 350px;
+  min-width: 40%;
+  height: 100px;
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: #fcfbfa;
+  border-radius: 8px;
+  box-shadow: 10px 10px black;
+}
+
+.titleHeader {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+}

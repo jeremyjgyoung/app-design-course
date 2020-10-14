@@ -1,0 +1,186 @@
+---
+title: Explanation 2.1 - Components
+topic: Second App
+order: 302
+---
+
+# Explanation of Activity Set 2.1
+
+This will explain the concepts from the last activity set.
+
+# Components' Syntax & Concepts
+
+Components are written with the component name surrounded by "<" and ">".
+
+```jsx
+// This is a Text component
+<Text>My text component</Text>
+```
+
+Inside the component you will often have more information like text or another component.
+
+```jsx
+// Text inside of the two tags
+<Text>Here is text.</Text>
+
+// Other components
+<View>
+    <View></View>
+    <View></View>
+</View>
+```
+
+Some components like the Image component don't need anything inside of it so it does not have a closing tag.
+
+```jsx
+// Self-Closing Tag
+<Image />
+
+// More information
+<Text>Here is text.</Text>
+```
+
+Within the first tag there will often be something to tell the component more information.
+For instance, where the image is located or how to style the component.
+These are called props or attributes.
+
+```jsx
+// The Text component with a style prop
+<Text style={styles.title}>Press Me</Text>
+
+// The Image component with a style prop and a source prop
+<Image
+    style={styles.image}
+    source={require("./forest-image.jpg")} 
+/>
+// Note that the white space makes it easier to read but has the same function
+```
+
+# The Image Component
+
+The Image component tells the computer which file to load, in addition
+to the width and height of the image.
+
+```jsx
+<Image 
+    style={styles.dogImage}
+    source={require('./fluffy-dog.jpg')} 
+/>
+```
+
+The Image tag does not have a closing tag because we don't put things inside of an Image tag. 
+Note when you have multiple props for a component you will often put it on different lines to make the component more readable.
+
+# The TouchableOpacity Component
+
+TouchableOpacity is used as a button.
+It has a special attribute called onPress which runs code when the button is pressed.
+
+```jsx
+<TouchableOpacity
+    style={styles.pressMeButton}
+    onPress={functionActivatedWhenPressed}
+>
+</TouchableOpacity>
+```
+Refer to the box model when adding styles to TouchableOpacity.
+
+If you text in your button you'll need to embed a Text component within the TouchableOpacity component.
+
+```jsx
+<TouchableOpacity
+    style={styles.pressMeButton}
+    onPress={functionActivatedWhenPressed}
+>
+    <Text>Press Me</Text>
+</TouchableOpacity>
+```
+
+# Event Handlers & Functions
+
+TouchableOpacity is used as a button.
+
+## Events
+
+An event is an action that happens in your app.
+An action could include a button press or hovering over a button.
+
+The TouchableOpacity component will "listen" for events if you add an attribute like onPress or onLongPress.
+
+```jsx
+// TouchableOpacity with the onPress attribute that names the function used when activated
+<TouchableOpacity
+  style={styles.pressMeButton}
+  onPress={functionActivatedWhenPressed}
+>
+  <Text>Press Me</Text>
+</TouchableOpacity>
+```
+
+## Event Handler
+
+The event handler is the function that runs once an event happens.
+For instance, functionActivatedWhenPressed is run after the user presses the TouchableOpacity component.
+
+```jsx
+let App = () => {
+  // functionActivatedWhenPressed is an event handeler
+  let functionActivatedWhenPressed = () => {
+    alert("Pressed!");
+    console.log("Yeah, definitely pressed the button");
+  };
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.pressMeButton}
+        onPress={functionActivatedWhenPressed}
+      >
+        <Text>Press Me</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+```
+
+# Arrow Functions
+
+A function is a piece of code that performs a task.
+Functions allow you to reuse code and make code easier to read.
+
+```js
+let functionActivatedWhenPressed = () => {
+  alert("Pressed!");
+  console.log("Yeah, definitely pressed the button");
+};
+```
+
+For this function, we have a name of functionActivatedWhenPressed, no parameters, and the thing it does in curly braces which is to alert and print messages.
+
+Let's look at another function.
+
+```js
+let addFunction = (a, b, c) => {
+  return a + b + c;
+};
+```
+
+This function has a name of addFunction, parameters a, b, and c, and it performs the task of adding a,b, and c.
+
+```js
+let addFunction = (a, b, c) => {
+  return a + b + c;
+};
+
+let res = addFunction(3, 5, 1);
+alert(res);
+```
+
+In this chunk of code we use addFunction passing it parameters of 3, 5, and 1. 
+The result that will be 9.
+Then 9 will be alerted to the screen.
+
+# Onward!
+
+Feel free to go to the home screen to check out more references or navigate back to the code to explore more.
+Move onto the next activity set when you feel ready.

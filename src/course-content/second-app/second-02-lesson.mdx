@@ -1,0 +1,195 @@
+---
+title: Activity 2.2 - Navigation
+topic: Second App
+order: 303
+---
+
+# Activity Set 2.2
+
+This activity set will introduce you to being able to navigate between different screens.
+
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-2.2" target="_blank"  class="mdxLink">Activity Set 2.2 Code</a>
+
+There is a lot more code in this example. In order to use navigation you do not need to understand every detail.
+
+## Activity I: Change the Starting Screen
+
+First, click on the buttons to go back and forth between the first and second screen.
+
+Change the **initialRouteName** from "First Screen" to **"Second Screen"**.
+
+How do you think this will change the app?
+
+```jsx
+// Before
+let App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="First Screen">
+        <Stack.Screen name="First Screen" component={ScreenOne} options={{ title: "1", headerTitleAlign: "center" }} />
+        <Stack.Screen name="Second Screen" component={ScreenTwo} options={{ title: "2", headerTitleAlign: "center" }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+```
+
+```jsx
+// After
+let App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Second Screen">
+        <Stack.Screen name="First Screen" component={ScreenOne} options={{ title: "1", headerTitleAlign: "center" }} />
+        <Stack.Screen name="Second Screen" component={ScreenTwo} options={{ title: "2", headerTitleAlign: "center" }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+```
+
+Now your app will start on the second screen.
+
+## Activity II: Change the Titles
+
+Change the **first** screen's **title** from "1" to **"Blue Screen"** and
+**second** screen's **title** from "2" to **"Grey Screen"**.
+
+Where will you see the app say Grey Screen?
+
+```jsx
+// Before
+let App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Second Screen">
+        <Stack.Screen name="First Screen" component={ScreenOne} options={{ title: "1", headerTitleAlign: "center" }} />
+        <Stack.Screen name="Second Screen" component={ScreenTwo} options={{ title: "2", headerTitleAlign: "center" }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+```
+
+```jsx
+// After
+let App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Second Screen">
+        <Stack.Screen name="First Screen" component={ScreenOne} options={{ title: "Blue Screen", headerTitleAlign: "center" }} />
+        <Stack.Screen name="Second Screen" component={ScreenTwo} options={{ title: "Grey Screen", headerTitleAlign: "center" }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+```
+
+Now the titles at the top of the app will reflect these changes.
+
+## Activity III: Add a Third Screen
+
+Now let's add a third screen.
+Between the end of ScreenTwo and the const Stack = createStackNavigator(); line of code we will add a third screen.
+
+```jsx
+// Add below line 40
+let ScreenThree = ({ navigation }) =>{
+  return (
+    <View>
+      <Text>Third Screen</Text>
+    </View>
+  );
+};
+```
+
+Great! But we don't see our third screen.
+
+## Activity IV: Link to the Third Screen
+
+We need to make the app and navigation aware of our third screen in the App function.
+
+```jsx
+// App Before
+let App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Second Screen">
+        <Stack.Screen name="First Screen" component={ScreenOne} options={{ title: "Blue Screen", headerTitleAlign: "center" }} />
+        <Stack.Screen name="Second Screen" component={ScreenTwo} options={{ title: "Grey Screen", headerTitleAlign: "center" }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+```
+
+```jsx
+// App After
+let App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Second Screen">
+        <Stack.Screen name="First Screen" component={ScreenOne} options={{ title: "Blue Screen", headerTitleAlign: "center" }} />
+        <Stack.Screen name="Second Screen" component={ScreenTwo} options={{ title: "Grey Screen", headerTitleAlign: "center" }}/>
+        <Stack.Screen name="Third Screen" component={ScreenThree} options={{ title: "3", headerTitleAlign: "center" }}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+```
+
+But we still don't use the third screen.
+Let's add a button that links from the second screen to the third screen
+
+```jsx
+// Before
+let ScreenTwo = ({ navigation }) => {
+  let goToFirstScreen = () => {
+    navigation.navigate("First Screen");
+  };
+
+  return (
+    <View style={styles.secondScreenContainer}>
+    <Text style={styles.titleText}>Second Screen</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={goToFirstScreen}
+      >
+        <Text>Go to the First Screen</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+```
+
+```jsx
+// After
+let ScreenTwo = ({ navigation }) => {
+  let goToFirstScreen = () => {
+    navigation.navigate("First Screen");
+  };
+
+  let thirdScreenFunction = () => {
+    navigation.navigate("Third Screen");
+  };
+
+  return (
+    <View style={styles.secondScreenContainer}>
+    <Text style={styles.titleText}>Second Screen</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={goToFirstScreen}
+      >
+        <Text>Go to the First Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={thirdScreenFunction}>
+        <Text>Go to the Third Screen</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
+```
+
+Great! Try out the app. Feel free to link back to the another screen from the third screen.
+
+Let's move onto to the explanation of this activity set.

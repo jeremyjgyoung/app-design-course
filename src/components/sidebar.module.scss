@@ -1,0 +1,54 @@
+.sideNav {
+    width: 100%;
+    background: #312D2A;
+    @media (min-width: 1000px) {
+        position: fixed;
+        width: 280px;
+        height: 100%;
+        min-height: 100vh;
+        overflow-y: scroll;
+        top: 0;
+        bottom: 0;
+
+    }
+    .siteTitle {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 32px;
+        color: #CCBBCC;
+        padding: 20px 20px 20px 20px;
+        margin-top: 20px;
+    }
+    .sideBarTopic {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: normal;
+        font-size: 28px;
+        color: #CCBBCC;
+        padding: 0 20px 20px 20px;
+    }
+    .sideBarTitles {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: normal;
+        color: #FCFBFA;
+        padding: 20px;
+    }
+    .activeDiv {
+        background: #2C5967;
+    }
+    .activeSideBarTitle {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        font-weight: normal;
+        color: #FCFBFA;
+        padding: 20px;
+    }
+    a {
+        text-decoration: none;
+        :hover {
+            background: #2C5967;
+        }
+    }
+    .activeLink {
+        background: #2C5967;
+    }
+}

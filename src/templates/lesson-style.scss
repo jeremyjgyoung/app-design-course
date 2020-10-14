@@ -1,0 +1,18 @@
+.mdxLink {
+    display: block;
+    width: 290px;
+    padding: 10px 20px;
+    margin: 5px 0px 20px 5px;
+    background-color: #2B6242;
+    border: 2px black;
+    border-radius: 8px;
+    box-shadow: 5px 5px black;
+
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    &:hover {
+        background-color: #e5b88e;
+        box-shadow: none;
+    }
+}

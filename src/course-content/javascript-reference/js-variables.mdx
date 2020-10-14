@@ -1,0 +1,94 @@
+---
+title: JavaScript Variables & Data
+topic: JavaScript Reference
+order: 602
+---
+
+# JavaScript Variables & Data
+
+Variables hold values. 
+Variables allow you to type a variable name instead of a long value, keep your code organized, and make it easy to change a value.
+
+```js
+// earthAge is a variable name
+let earthAge = 4543000000;
+
+alert("The earth is " + earthAge + " years old.");
+```
+
+## Variable Syntax
+
+In JavaScript, you will see a keyword, a variable name, the equal sign, and the value to setup a variable.
+
+```js
+let lastName = "Young";
+```
+
+There are two steps to setting up a variable. First, is to declare the variable which sets the name of the variable.
+The second step is to initialize the variable which sets the starting value of a variable. 
+You can do both steps in one or two lines of code.
+
+```js
+// Declare a variable
+let stepCount;
+
+// Initialize a variable
+stepCount = 0;
+
+// Declare and initialize a variable in a single step
+let stepCount = 0;
+```
+
+## Variable Keywords
+
+There are three keywords used to declare a variables: let, var, and const.
+
+For this course we will be using let as the default.
+The other two keywords have a similar use but const cannot be reassigned and var can be used in more places.
+
+With JavaScript you do not denote the data type when declaring the variable unlike many other programming languages.
+
+## Data Types
+
+You may have noticed quotes around certain values. 
+Strings are text and include quotes.
+The other two most common data types in JavaScript are numbers and booleans. 
+Booleans has two values true and false.
+
+```js
+// Examples of Strings
+let firstName = "Sarah";
+let favDinosaur = "Archaeopteryx";
+let aQuote = "If I had asked people what they wanted, they would have said faster horses."
+
+// Examples of Numbers
+let partOfPi = 3.14;
+let startValue = 0;
+let aLargeNumber = 999999999999999;
+
+// Examples of Booleans
+let signedIn = true;
+let darkModeOn = false;
+```
+## Names & Capitalization
+
+When you name a variable you should use a short yet descriptive word or phrase. 
+A convention for naming variables is capitalizing every word except the first.
+
+A common bug in code is a slight mispelling - the computer needs references to variables to be the exact same as the variable name.
+
+## Data Structures
+
+To hold related values, we will use two types of data structures.
+
+An array holds a list of related values.
+
+```js
+let listOfGroceries = [Coconut Milk", "Potatoes", "Carrots", "Chillies", "Ginger", "Garlic", "Onions"];
+```
+
+An object holds a pairs of related values.
+
+```js
+let userDetails = { firstName: "Mary", lastName: "Chen", userName: "mchen79", signedIn: false, age: 41};
+```

@@ -1,0 +1,85 @@
+---
+title: Flexbox
+topic: Style Reference
+order: 503
+---
+
+import FlexRatio from "../components-for-content/FlexRatio.jsx";
+import FlexAxes from "../components-for-content/FlexAxes.jsx";
+
+Flexbox allows us to place elements.
+
+## The View Component
+
+Each View component you can think of as a rectangle.
+Often we have one rectangle wrapping other rectangles.
+The View rectangle wrapping the other components is called the parent
+and the rectangles being wrapped are the children.
+
+```jsx
+export default function App() {
+  return (
+    <View style={styles.parent}>
+      <View style={styles.childOne}></View>
+      <View style={styles.childTwo}></View>
+      <View style={styles.childThree}></View>
+    </View>
+  );
+}
+```
+
+The parent decides on the direction of the children. The children have control over their flex number which affects how much space they take up.
+
+## Flex Direction
+
+Since Expo is used to build mobile apps the default direction set to column (since your phone is typically vertical).
+You can change the flexDirection to row. The parent View component sets the flex direction for all its child View components.
+
+## Flex Number
+
+The flex number is a ratio for how much space an element takes up.
+For instance, if there are two boxes in a flex container with a flex number of
+2 and 3 - then the first box will take up two-fifths of the space and the other box will take up three-fifths of the space.
+
+## Example with a Flex Direction & Number
+
+Change the flex direction and number to see how it affects the boxes.
+
+<FlexRatio />
+
+You can try out your knowledge of the flex box by changing the flex direction and flex numbers for <a href="https://snack.expo.io/@jeremyjgyoung/flexbox-example" target="_blank">this example.</a>
+
+## The Two Axes
+
+There are two axes: the main axis and the cross axis.
+
+If the flex direction is in the row orientation, then the main axis runs from left to right and the cross axis runs from top to bottom.
+If the flex direction is in the column orientation, then the main axis runs from top to bottom and the cross axis runs from left to right.
+
+## justifyContent and alignItems
+
+The children of the main container can be at the start (flex-start), end (flex-end), or center.
+On the main axis justifyContent is the property to use and on the cross axis alignItems is the property to use.
+
+Change the axis, justifyContent, and alignItems, respectively, with the dropdowns below.
+
+<FlexAxes />
+
+## Flexbox Video
+
+https://www.youtube.com/watch?v=K74l26pE4YA
+
+## Flexbox Article
+
+<a
+  href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+  target="_blank"
+>
+  Here is an excellent article with clear illustrations for flexbox.
+</a>
+
+## Flexbox Example
+
+You can try out your knowledge of flexbox with the following two examples.
+
+<a href="https://snack.expo.io/@jeremyjgyoung/flexbox-example-one" target="_blank">The first example</a> you can changing the flex numbers and <a href="https://snack.expo.io/@jeremyjgyoung/flexbox-example-two" target="_blank">the second example</a> you can change the flexDirection, justifyContent, and alignItems.

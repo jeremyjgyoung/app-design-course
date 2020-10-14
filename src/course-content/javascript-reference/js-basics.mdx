@@ -1,0 +1,164 @@
+---
+title: Code Basics
+topic: JavaScript Reference
+order: 601
+---
+
+# Code Basics
+
+Code is instructions to the computer.
+
+## Languages
+
+In Expo, we are using JavaScript and JSX code.
+JavaScript is the language that the web is built on.
+We use it to add functionality to our apps.
+
+Here is an example of some JavaScript code.
+
+```js
+let heightToInches = (feet, inches) => {
+  return feet * 12 + inches;
+};
+
+let tallestHeight = heightToInches(8, 11);
+console.log(tallestHeight);
+```
+
+JSX is a modern way of placing the design elements in together
+with the code that is in control of our functionality.
+If you are familiar with HTML, JSX looks very similar.
+
+Here is an example of JSX being used alongside JavaScript.
+
+```jsx
+// Each of the components (View, TouchableOpacity, and Text) are JSX components
+// Note there is also JavaScript inside of JSX
+// The JavaScript is written inside of curly braces {}
+<View>
+  <TouchableOpacity
+    onPress={functionActivatedWhenPressed}
+  >
+    <Text>Press Me</Text>
+  </TouchableOpacity>
+</View>
+```
+
+The StyleSheet object is written in JavaScript but it most similar to CSS in web development
+
+```js
+let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#00ffff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  boxOne: {
+    backgroundColor: "#0000ff",
+    width: "200px",
+    height: "100px",
+    padding: "20px",
+    borderWidth: "5px",
+    borderColor: "#ff00ff",
+    margin: "50px",
+  },
+  boxTwo: {
+    backgroundColor: "#ff0000",
+    width: "200px",
+    height: "100px",
+  },
+  exampleText: {
+    color: "#ffffff",
+  },
+});
+```
+
+Here is the same code in CSS:
+
+```CSS
+.container: {
+  flex: 1;
+  background-color: #00ffff;
+  align-items: center;
+  justify-content: center;
+}
+.boxOne: {
+  background-color: #0000ff;
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border-width: 5px;
+  border-color: #ff00ff;
+  margin: 50px;
+}
+.boxTwo: {
+  background-color: #ff0000;
+  width: 200px;
+  height: 100px;
+}
+.exampleText: {
+  color: #ffffff;
+}
+```
+
+There are small differences like the punctuation and naming of properties.
+Looking up CSS rules and reformatting it to a StyleSheet can be helpful in styling your app.
+
+## Syntax
+
+In code there are keywords that have special meanings.
+Some of these words are built into the language, for instance **return** and **let** have special meanings in JavaScript.
+Often we use words that have special meaning from a library, for instance **TouchableOpacity** is a special word that
+uses code from folks at React Native.
+
+```jsx
+// Notice all of the punctuation with {}, (), ;, and ,
+// Every word in here is a keyword except for styles and thisCouldBeAnyName
+import React from "react";
+import { StyleSheet, View } from "react-native";
+
+let App = () => {
+  return (
+    // styles.thisCouldBeAnyName is a reference to the style object below
+    <View style={styles.thisCouldBeAnyName}>
+    </View>
+  );
+};
+
+// styles is a variable name - other words would work too
+let styles = StyleSheet.create({
+  // thisCouldBeAnyName is a property name - other words would work here too
+  thisCouldBeAnyName: {
+    backgroundColor: "#00ffff",
+    height: "100%",
+  },
+});
+
+export default App;
+```
+
+In code, the punctuation is also extremely important.
+Each comma, curly brace, parenthesis, and semi-colon has a purpose.
+Semi-colons for instance are used similar to periods at the end of a sentence.
+
+## alert() & console.log()
+
+In order to figure out why your code is not working, it can be useful to see certain values.
+
+With alert() you will see the value as a pop up and console.log() will print values to the console.
+
+## Comments
+
+Comments are:
+1. not run as code
+2. helpful for notes to programmers
+3. useful tools to toggle code on or off
+
+```js
+// This is a comment
+// Comments are start with two slashes // in JS
+// You can toggle comments with Ctrl + /
+
+console.log("This line is run as code");
+```

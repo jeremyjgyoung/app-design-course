@@ -1,0 +1,60 @@
+---
+title: Explanation 2.2 - Navigation
+topic: Second App
+order: 304
+---
+
+# Explanation of Activity Set 2.2
+
+This will explain the concepts from the last activity set.
+
+# Navigation
+
+## Setting Up Navigation
+
+In the main App or MyStack in the case below.
+We make the app aware of all of the screens in our app.
+
+```jsx
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
+
+function MyStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Notifications" component={Notifications} />
+      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Settings" component={Settings} />
+    </Stack.Navigator>
+  );
+}
+```
+
+## Using a Button to Go to Another screens
+
+To go to another screen we use .navigate().
+Inside the parentheses we put the name of the screen we want to go to.
+
+```jsx
+function Settings({ navigation }) {
+  const goHome = () => {
+    navigation.navigate("Home");
+  };
+
+  return (
+    <View>
+      <TouchableOpacity onPress={goHome}>
+        <Text>Go Back Home</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+```
+
+
+# Onward!
+
+Feel free to go to the home screen to check out more references or navigate back to the code to explore more.
+Move onto the next activity set when you feel ready.

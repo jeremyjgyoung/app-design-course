@@ -1,0 +1,121 @@
+---
+title: Activity Set 3.2 - Arrays
+topic: Third App
+order: 404
+---
+
+# Activity Set 3.2
+
+This activity set will teach you how to use an array.
+
+# Activities
+
+For this set of activities you will be changing code
+from this link: 
+
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-3.2" target="_blank"  class="mdxLink">Activity Set 3.2 Code</a>
+
+## Activity I: Add to the Array
+
+Add more food emojis to the foodArray.
+
+```jsx title=App.js
+// Before
+let foodArray = ["🍕", "🥯", "🥯", "🥗"];
+
+// After
+let foodArray = ["🍕", "🥯", "🥯", "🥗", "🍟", "🌮"];
+```
+
+## Activity II: Add Text
+
+Before each emoji is rendered, add text that says FOOD EMOJI:.
+
+```jsx title=App.js
+// Before
+{foodArray.map((emoji) =>
+  <Text style={styles.emoji}>{emoji}</Text>
+)}
+
+// After
+{foodArray.map((emoji) =>
+  <Text style={styles.emoji}>FOOD EMOJI:</Text>
+  <Text style={styles.emoji}>{emoji}</Text>
+)}
+```
+
+## Activity III: Add a View
+
+Wrap the two Text components in a View.
+
+```jsx title=App.js
+// Before
+{foodArray.map((emoji) =>
+  <Text style={styles.emoji}>FOOD EMOJI:</Text>
+  <Text style={styles.emoji}>{emoji}</Text>
+)}
+
+// After
+{foodArray.map((emoji) =>
+  <View>
+    <Text style={styles.emoji}>FOOD EMOJI:</Text>
+    <Text style={styles.emoji}>{emoji}</Text>
+  </View>
+)}
+```
+
+## Activity IV: Style the View
+
+Add a style attribute to the View and add styles to the StyleSheet.
+
+```jsx title=App.js
+// Before
+{foodArray.map((emoji) =>
+  <View>
+    <Text style={styles.emoji}>FOOD EMOJI:</Text>
+    <Text style={styles.emoji}>{emoji}</Text>
+  </View>
+)}
+
+// After adding the style attribute
+{foodArray.map((emoji) =>
+    <View style={styles.emojiCard}>
+    <Text style={styles.emoji}>FOOD EMOJI:</Text>
+    <Text style={styles.emoji}>{emoji}</Text>
+  </View>
+)}
+
+// Before
+let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    backgroundColor: "#ecf0f1",
+    padding: 20,
+  },
+  emoji: {
+    fontSize: 100,
+  },
+});
+
+// After
+let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    backgroundColor: "#ecf0f1",
+    padding: 20,
+  },
+  emoji: {
+    fontSize: 100,
+  },
+  emojiCard: {
+    padding: 20,
+    backgroundColor: "#0000ff",
+  },
+});
+```
+
+Feel free to explore more with making and using arrays.
+
+Then move onto the next code set.

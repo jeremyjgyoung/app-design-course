@@ -1,0 +1,84 @@
+---
+title: Activity Set 3.3 - Adding to Arrays
+topic: Third App
+order: 406
+---
+
+# Activity Set 3.3
+
+This activity set will combine the concepts of arrays and local state.
+
+# Activities
+
+For this set of activities you will be changing code
+from this link: 
+
+<a href="https://snack.expo.io/@jeremyjgyoung/data-app-activity-set-three" target="_blank"  class="mdxLink">Activity Set 3.3 Code</a>
+
+## Activity I: Press the Button
+
+Press the 🍕 button to add a pizza emoji to the emoji array.
+
+## Activity II: Add a Button
+
+Add a button to the app to add a different food item to the array.
+
+```jsx title=App.js
+// Before
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => updateFoodArray('🍕')}
+>
+  <Text style={styles.btnText}>🍕</Text>
+</TouchableOpacity>
+
+// After
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => updateFoodArray('🍕')}
+>
+  <Text style={styles.btnText}>🍕</Text>
+</TouchableOpacity>
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => updateFoodArray('🥐')}
+>
+  <Text style={styles.btnText}>🥐</Text>
+</TouchableOpacity>
+```
+
+## Activity III: Change the Parameter
+
+Change the parameter sent to the updateFoodArray function.
+
+```jsx title=App.js
+// Before
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => updateFoodArray('🍕')}
+>
+
+// After
+<TouchableOpacity
+  style={styles.button}
+  onPress={() => updateFoodArray('🍊')}
+>
+```
+
+## Activity IV: Change the updateFoodArray
+
+Delete the ...foodArray code from the updateFoodArray function.
+
+What do you think this will change when you hit a button?
+
+```jsx title=App.js
+// Before
+const updateFoodArray = (emoji) => {
+  setFoodArray((foodArray) => [...foodArray, emoji]);
+};
+
+// After
+const updateFoodArray = (emoji) => {
+  setFoodArray((foodArray) => [emoji]);
+};
+```

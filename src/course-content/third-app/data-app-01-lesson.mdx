@@ -1,0 +1,101 @@
+---
+title: Activity Set 3.1 - State
+topic: Third App
+order: 402
+---
+
+# Activity Set 3.1
+
+This activity set will expose you to how to use data or state within your app.
+
+For this set of activities you will be changing code
+from this link: 
+
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-3.1" target="_blank"  class="mdxLink">Activity Set 3.1 Code</a>
+
+## Activity I: Use a Variable
+
+Use the tomatoEmoji variable in your code.
+
+To do this add a text component before the the end of the closing View tag. 
+Inside the component include the tomatoEmoji within curly braces.
+
+How do you think the app will change?
+
+```jsx title=App.js
+// Before
+return (
+  <View style={styles.container}>
+    <TouchableOpacity onPress={updateEmoji} style={styles.button}>
+      <Text style={styles.buttonText}>Press This</Text>
+    </TouchableOpacity>
+    <Text style={styles.emoji}>{emojiData}</Text>
+  </View>
+);
+
+// After
+return (
+  <View style={styles.container}>
+    <TouchableOpacity onPress={updateEmoji} style={styles.button}>
+      <Text style={styles.buttonText}>Press This</Text>
+    </TouchableOpacity>
+    <Text style={styles.emoji}>{emojiData}</Text>
+    <Text>{tomatoEmoji}</Text>
+  </View>
+);
+```
+
+The curly braces {} around tomatoEmoji tell the computer this is JavaScript code.
+
+To extend your learning you can use the tomatoEmoji variable before and after the button and style the emoji.
+
+## Activity II: Change the Initial State
+
+Change the initial state from an empty string to the bread and strawberry emojis.
+What do you expect to happen?
+
+Restart the app after making theses changes.
+
+```jsx title=App.js
+// Before
+let [emojiData, setEmojiData] = useState("");
+
+// After
+let [emojiData, setEmojiData] = useState("🍞🥭");
+```
+
+The parameter for useState is the initial state for 
+
+## Activity III: Change the State After Being Pressed
+
+Change the parameter in the setEmojiData() function from the emoji 🍕 to the word "Pizza".
+
+```jsx title=App.js
+// Before
+let updateEmoji = () => {
+  setEmojiData("🍕");
+};
+
+// After
+let updateEmoji = () => {
+  setEmojiData("Pizza");
+};
+```
+
+## Activity IV: Rename the Data
+
+Rename emojiData and setEmojiData to foodEmoji and setFoodEmoji.
+Make sure to change those variables anywhere they appear.
+
+```jsx title=App.js
+// Before
+let [emojiData, setEmojiData] = useState("");
+
+// After
+let [foodEmoji, setFoodEmoji] = useState("");
+```
+The names emojiData and setEmojiData are two are variable names for the name of the state and a way to change the state.
+
+Feel free to explore the code here to figure out how useState works.
+
+Then move onto the next code set.

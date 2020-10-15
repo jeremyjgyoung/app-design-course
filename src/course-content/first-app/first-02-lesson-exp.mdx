@@ -12,9 +12,9 @@ This will explain the concepts from the last activity set.
 
 # Objects & the StyleSheet
 
-Objects are a way of holding pairs of data that are all related.
+Objects hold pairs of related data.
 
-For instance, here are two objects of possible users of your app.
+For example, here are two objects that represent users of an app.
 
 ```js
 let userOne = {
@@ -32,9 +32,12 @@ let userTwo = {
 };
 ```
 
-For these users, we have seen the three main types of data: numbers, strings (text wrapped in strings), and booleans (the values true and false).
+These users use the three main types of data: **numbers**, **strings** (text wrapped in strings), and **booleans** (the values true and false).
 
-The value for a property can also be an object, as well. So we could have an object full of users that has embedded objects.
+The value for a property can also be an object, as well. 
+Here is an object that hold all of the users which are also objects. 
+So we have objects embedded within an object.
+
 ```js
 let appUsers = {
   userOne: {
@@ -52,11 +55,9 @@ let appUsers = {
 };
 ```
 
-Take a moment to look at the syntax differences between having userOne and userTwo as separate objects versus being object embedded in a larger object. 
-In the second example we see a : replacing the = and a , replacing the ;.
+Take a moment to look at the syntax differences between having *userOne* and *userTwo* as separate objects versus being object embedded in a larger object, *appUsers*. 
 
-Now when we look at the StyleSheet, we can see that it is an object with embedded objects for each separate style. 
-In addition, the StyleSheet.create() code allows us to use the styles in other places.
+Now when we look at the StyleSheet, we can notice it is an object with embedded objects for each separate style. 
 
 ```js
 let styles = StyleSheet.create({
@@ -92,6 +93,8 @@ let styles = StyleSheet.create({
   },
 });
 ```
+
+In addition, the StyleSheet.create() code allows us to use the styles in other places.
 
 # View Components Make the Layout
 

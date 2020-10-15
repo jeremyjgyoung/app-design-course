@@ -25,6 +25,8 @@ const FlexRatio = () => {
   `;
 
   const dropDown = css`
+    font-size: 20px;
+    color: #333333;
     width: 200px;
     height: 50px;
   `;
@@ -48,8 +50,9 @@ const FlexRatio = () => {
   `;
 
   const flexHeader = css`
-    margin: 0 0 5px 0;
-    color: #0055aa;
+    font-size: 24px;
+    margin: 10px 0 5px 0;
+    color: #333333;
   `;
 
   return (

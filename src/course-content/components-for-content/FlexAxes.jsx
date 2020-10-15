@@ -19,6 +19,9 @@ const FlexRatio = () => {
   };
 
   const dropDown = css`
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
     width: 200px;
     height: 50px;
   `;

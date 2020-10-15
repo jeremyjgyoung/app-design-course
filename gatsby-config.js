@@ -34,7 +34,7 @@ module.exports = {
             family: `Roboto`,
           },
           {
-            family: `VT323`,
+            family: `Overpass Mono`,
           },
         ],
       },

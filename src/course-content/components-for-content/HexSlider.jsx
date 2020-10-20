@@ -20,7 +20,7 @@ const HexSlider = () => {
   `;
 
   const hexHeader = css`
-    color: #003388;
+    color: #333333;
     margin: 0 0 5px 0;
     font-weight: bold;
   `;

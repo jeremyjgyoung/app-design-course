@@ -16,13 +16,50 @@ export default function Home({ data }) {
       <div className={mSty.container}>
         <h1 className={mSty.title}>App Design</h1>
         <h1 className={mSty.subTitle}>Overview</h1>
-        <Link className={mSty.card} to="/overview/setup">
+        <Link className={mSty.card} to="/overview/goals-grades">
           <div className={mSty.cardContainer}>
-            <h2>Overview</h2>
+            <h2>Course Overview</h2>
             <h3>Learn more about this class and how to get set up.</h3>
           </div>
         </Link>
+        <h1 className={mSty.subTitle}>Design Thinking</h1>
+        <Link className={mSty.card} to="/design-thinking/overview/design-thinking-overview">
+          <div className={mSty.cardContainer}>
+            <h2>Design Thinking Overview</h2>
+            <h3>Learn more about design thinking.</h3>
+          </div>
+        </Link>
+        <Link className={mSty.card} to="/design-thinking/empathize/what-is-empathy">
+          <div className={mSty.cardContainer}>
+            <h2>Empathize</h2>
+            <h3>Build empathy for the user of your app.</h3>
+          </div>
+        </Link>
+        <Link className={mSty.card} to="/design-thinking/define/what-is-define">
+          <div className={mSty.cardContainer}>
+            <h2>Define</h2>
+            <h3>Define who your user is, what they need, and uncover insights.</h3>
+          </div>
+        </Link>
+        <Link className={mSty.card} to="/design-thinking/ideate/what-is-ideate">
+          <div className={mSty.cardContainer}>
+            <h2>Ideate</h2>
+            <h3>Come up with app ideas based on your user.</h3>
+          </div>
+        </Link>
+        <Link className={mSty.card} to="/design-thinking/prototype-test/what-is-prototype-test">
+          <div className={mSty.cardContainer}>
+            <h2>Prototype & Test</h2>
+            <h3>Design and develop your app testing it to make you are on the right track.</h3>
+          </div>
+        </Link>
         <h1 className={mSty.subTitle}>Build Apps</h1>
+        <Link className={mSty.card} to="/tech-overview/setup">
+          <div className={mSty.cardContainer}>
+            <h2>Tech Overview</h2>
+            <h3>Learn about style by building an app.</h3>
+          </div>
+        </Link>
         <Link className={mSty.card} to="/first-app/first-overview">
           <div className={mSty.cardContainer}>
             <h2>First App: Style</h2>
@@ -42,6 +79,12 @@ export default function Home({ data }) {
           </div>
         </Link>
         <h1 className={mSty.subTitle}>References & Resources</h1>
+        <Link className={mSty.card} to="/references-resources/app-recipes/map-recipe">
+          <div className={mSty.cardContainer}>
+            <h2>App Recipes</h2>
+            <h3>Lessons on how to implement advanced features.</h3>
+          </div>
+        </Link>
         <Link className={mSty.card} to="/style-reference/colors">
           <div className={mSty.cardContainer}>
             <h2>Style Reference</h2>

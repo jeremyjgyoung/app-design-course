@@ -1,0 +1,36 @@
+---
+title: Maps
+topic: App Recipes
+order: 3101
+---
+
+# Maps
+
+## Example Code for Maps
+
+Here is code relevant for implementing maps in your app.
+
+<a href='https://snack.expo.io/@jeremyjgyoung/activity-set-1.1' target='_blank' class="mdxLink">
+    Maps Example Code
+</a>
+
+## Showing a Map
+
+Each View component you can think of as a rectangle.
+Often we have one rectangle wrapping other rectangles.
+The View rectangle wrapping the other components is called the parent
+and the rectangles being wrapped are the children.
+
+```jsx
+export default function App() {
+  return (
+    <View style={styles.parent}>
+      <View style={styles.childOne}></View>
+      <View style={styles.childTwo}></View>
+      <View style={styles.childThree}></View>
+    </View>
+  );
+}
+```
+
+The parent decides on the direction of the children. The children have control over their flex number which affects how much space they take up.

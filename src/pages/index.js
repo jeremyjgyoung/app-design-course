@@ -29,7 +29,7 @@ export default function Home({ data }) {
             <h3>Learn more about design thinking.</h3>
           </div>
         </Link>
-        <Link className={mSty.card} to="/design-thinking/empathize/what-is-empathy">
+        <Link className={mSty.card} to="/design-thinking/empathize/what-is-empathize">
           <div className={mSty.cardContainer}>
             <h2>Empathize</h2>
             <h3>Build empathy for the user of your app.</h3>
@@ -79,10 +79,10 @@ export default function Home({ data }) {
           </div>
         </Link>
         <h1 className={mSty.subTitle}>References & Resources</h1>
-        <Link className={mSty.card} to="/references-resources/app-recipes/map-recipe">
+        <Link className={mSty.card} to="/references-resources/app-recipes/font-recipe">
           <div className={mSty.cardContainer}>
             <h2>App Recipes</h2>
-            <h3>Lessons on how to implement advanced features.</h3>
+            <h3>Lessons on how to implement app features.</h3>
           </div>
         </Link>
         <Link className={mSty.card} to="/style-reference/colors">
@@ -104,6 +104,14 @@ export default function Home({ data }) {
             <h2>React Reference</h2>
             <h3>
               Here are resources for React, React Native, Expo, and JSX.
+            </h3>
+          </div>
+        </Link>
+        <Link className={mSty.card} to="/design-thinking-resources/design-thinking-resource-list">
+          <div className={mSty.cardContainer}>
+            <h2>Design Thinking Resources</h2>
+            <h3>
+              More resources to learn about design thinking.
             </h3>
           </div>
         </Link>

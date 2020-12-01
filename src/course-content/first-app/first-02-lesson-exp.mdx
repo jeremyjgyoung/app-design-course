@@ -137,7 +137,7 @@ The View rectangle wrapping the other components is called the parent
 and the rectangles being wrapped are the children.
 
 ```jsx
-export default function App() {
+let App = () => {
   return (
     <View style={styles.parent}>
       <View style={styles.childOne}></View>
@@ -145,7 +145,7 @@ export default function App() {
       <View style={styles.childThree}></View>
     </View>
   );
-}
+};
 ```
 
 The parent decides on the direction of the children. The children have control over their flex number which affects how much space they take up.

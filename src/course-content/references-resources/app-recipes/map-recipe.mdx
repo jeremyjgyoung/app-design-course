@@ -1,36 +1,78 @@
 ---
 title: Maps
 topic: App Recipes
-order: 3101
+order: 4102
 ---
 
 # Maps
 
 ## Example Code for Maps
 
-Here is code relevant for implementing maps in your app.
+Here is code relevant for implementing maps in your app. You may need to launch Expo on your phone or use a phone emulator to see the results from this code.
 
-<a href='https://snack.expo.io/@jeremyjgyoung/activity-set-1.1' target='_blank' class="mdxLink">
+<a href='https://snack.expo.io/@jeremyjgyoung/map-example' target='_blank' class="mdxLink">
     Maps Example Code
 </a>
 
-## Showing a Map
+## Code Explanation
 
-Each View component you can think of as a rectangle.
-Often we have one rectangle wrapping other rectangles.
-The View rectangle wrapping the other components is called the parent
-and the rectangles being wrapped are the children.
+The library used here is *'react-native-maps'*.
 
 ```jsx
-export default function App() {
-  return (
-    <View style={styles.parent}>
-      <View style={styles.childOne}></View>
-      <View style={styles.childTwo}></View>
-      <View style={styles.childThree}></View>
-    </View>
-  );
-}
+import MapView from 'react-native-maps';
 ```
 
-The parent decides on the direction of the children. The children have control over their flex number which affects how much space they take up.
+The *MapView.Marker* is a pin set at a specific coordinate that reveals a title and description when clicked on. You can even designate a hexcolor for your pin with the *pinColor* prop.
+
+```jsx
+<MapView.Marker
+  coordinate={{latitude: 37.73538,
+      longitude: -122.4324,}}
+  title={"Title of the Marker"}
+  description={"This is a description here."}
+  pinColor='#ff00ff'
+/>
+```
+
+Here is the code for showing a map starting with a particular region shown in the *initialRegion* prop.
+
+```jsx
+let App = () => {
+  return (
+    <View style={styles.mapContainer}>
+      <MapView
+        style={styles.mapStyle}
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      >
+      </MapView>
+    </View>
+  );
+};
+
+let styles = StyleSheet.create({
+  mapContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+  mapStyle: { 
+    marginTop: 20, 
+    width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+  }
+});
+```
+
+## Documentation
+
+Here is a link to the react-native-maps project.
+
+<a href='https://github.com/react-native-maps/react-native-maps' target='_blank' class="mdxLink">
+    React Native Maps Project Documentation
+</a>

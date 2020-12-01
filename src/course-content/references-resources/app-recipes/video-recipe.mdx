@@ -1,0 +1,42 @@
+---
+title: Video
+topic: App Recipes
+order: 4106
+---
+
+# Video
+
+## Example Code for a Video
+
+Here is code relevant for playing a video in your app.
+
+<a href='https://snack.expo.io/@jeremyjgyoung/play-video-example' target='_blank' class="mdxLink">
+    Video Example Code
+</a>
+
+## Code Explanation
+
+Vibration is a component available from the Expo library.
+
+```jsx
+import { Video } from 'expo-av';
+```
+
+Here is the *Video* component from Expo. The source prop points to the location of the video to play.
+
+```jsx
+<Video
+    source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
+    shouldPlay
+    useNativeControls
+    style={{ width: "100%", height: "50%" }}
+/>
+```
+
+## Documentation
+
+Here is a link to Expo's AV documentation.
+
+<a href='https://docs.expo.io/versions/latest/sdk/av/' target='_blank' class="mdxLink">
+    Expo's Audio Visual Documentation
+</a>

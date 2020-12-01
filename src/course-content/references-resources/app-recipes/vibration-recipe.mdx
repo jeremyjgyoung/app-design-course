@@ -1,0 +1,37 @@
+---
+title: Phone Buzz
+topic: App Recipes
+order: 4104
+---
+
+# Phone Buzz
+
+## Example Code for a Phone Buzz
+
+Here is code relevant for implementing a phone buzz in your app. You will need to use this on your phone to feel the phone buzz.
+
+<a href='https://snack.expo.io/@jeremyjgyoung/phone-buzz-example' target='_blank' class="mdxLink">
+    Phone Buzz Example Code
+</a>
+
+## Code Explanation
+
+Vibration is a component available from the React Native library.
+
+```jsx
+import { Text, View, Vibration, TouchableOpacity, StyleSheet } from 'react-native';
+```
+
+Vibration component has a method/function that is called with the vibration time measured in milliseconds. In this particular example the phone will buzz for a second when the button is pressed.
+
+```jsx
+onPress={() => Vibration.vibrate(1000)}
+```
+
+## Documentation
+
+Here is a link to the Vibration component documentation.
+
+<a href='https://reactnative.dev/docs/vibration' target='_blank' class="mdxLink">
+    Vibration Documentation
+</a>

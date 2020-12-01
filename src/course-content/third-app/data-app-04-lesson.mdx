@@ -13,15 +13,37 @@ This activity set is a to do list app that will use many of the concepts already
 For this set of activities you will be changing code
 from this link: 
 
-<a href="https://snack.expo.io/@jeremyjgyoung/90890b" target="_blank" class="mdxLink">Activity Set 3.4 Code</a>
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-3.4" target="_blank" class="mdxLink">Activity Set 3.4 Code</a>
 
-## Activity I: Add To Dos
+## Activity I: Change the Value Prop
+
+Try typing in the text input box.
+
+Now change the value prop in the TextInput component from the value "This is static text" to *{toDo}*.
+
+```jsx title=App.js
+// Before
+<TextInput
+  style={styles.input}
+  onChangeText={updateCurrToDo}
+  value="This is static text"
+/>
+
+// After
+<TextInput
+  style={styles.input}
+  onChangeText={updateCurrToDo}
+  value={toDo}
+/>
+```
+
+## Activity II: Add To Dos
 
 Add a few to do items by typing into the text input and clicking ADD TO DO.
 
 Refresh your browser when you're done adding to the to do list.
 
-## Activity II: Add a Text Component
+## Activity III: Add a Text Component
 
 Below the button add a text component that shows the current toDo.
 
@@ -41,7 +63,7 @@ This gives you insight to how the to do list works.
 The current to do is always set to the variable toDo, then it is added to the
 toDoList array whenever you press ADD TO DO.
 
-## Activity III: Delete the Text Component
+## Activity IV: Delete the Text Component
 
 Now delete the text component below the button.
 It was used to explain how the to do list works.
@@ -55,12 +77,12 @@ It was used to explain how the to do list works.
 <Button title="Add To Do" onPress={updateToDoList} />
 ```
 
-## Activity IV: Change the To Do Styling
+## Activity V: Change the To Do Styling
 
 Change the style of the to dos and then add some to dos.
 
 ```jsx title=App.js
-// Relevant code
+// Relevant starting code - change this
 toDoView: {
   marginTop: 20,
   backgroundColor: '#9999bb',

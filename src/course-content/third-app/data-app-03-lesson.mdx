@@ -13,7 +13,7 @@ This activity set will combine the concepts of arrays and local state.
 For this set of activities you will be changing code
 from this link: 
 
-<a href="https://snack.expo.io/@jeremyjgyoung/data-app-activity-set-three" target="_blank"  class="mdxLink">Activity Set 3.3 Code</a>
+<a href="https://snack.expo.io/@jeremyjgyoung/activity-set-3.3" target="_blank"  class="mdxLink">Activity Set 3.3 Code</a>
 
 ## Activity I: Press the Button
 
@@ -73,12 +73,12 @@ What do you think this will change when you hit a button?
 
 ```jsx title=App.js
 // Before
-const updateFoodArray = (emoji) => {
+let updateFoodArray = (emoji) => {
   setFoodArray((foodArray) => [...foodArray, emoji]);
 };
 
 // After
-const updateFoodArray = (emoji) => {
+let updateFoodArray = (emoji) => {
   setFoodArray((foodArray) => [emoji]);
 };
 ```

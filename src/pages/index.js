@@ -23,6 +23,7 @@ export default function Home({ data }) {
           </div>
         </Link>
         <h1 className={mSty.subTitle}>Design Thinking</h1>
+        <div className={mSty.sectionCardContainer}>
         <Link className={mSty.card} to="/design-thinking/overview/design-thinking-overview">
           <div className={mSty.cardContainer}>
             <h2>Design Thinking Overview</h2>
@@ -53,7 +54,9 @@ export default function Home({ data }) {
             <h3>Design and develop your app testing it to make you are on the right track.</h3>
           </div>
         </Link>
+        </div>
         <h1 className={mSty.subTitle}>Build Apps</h1>
+        <div className={mSty.sectionCardContainer}>
         <Link className={mSty.card} to="/tech-overview/setup">
           <div className={mSty.cardContainer}>
             <h2>Tech Overview</h2>
@@ -78,7 +81,9 @@ export default function Home({ data }) {
             <h3>Learn how to work with data through building an app.</h3>
           </div>
         </Link>
+        </div>
         <h1 className={mSty.subTitle}>References & Resources</h1>
+        <div className={mSty.sectionCardContainer}>
         <Link className={mSty.card} to="/references-resources/app-recipes/font-recipe">
           <div className={mSty.cardContainer}>
             <h2>App Recipes</h2>
@@ -115,6 +120,7 @@ export default function Home({ data }) {
             </h3>
           </div>
         </Link>
+      </div>
       </div>
     </div>
     </React.Fragment>
